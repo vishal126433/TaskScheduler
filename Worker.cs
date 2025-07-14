@@ -20,7 +20,6 @@ namespace duedate
 
         protected override async Task ExecuteAsync(CancellationToken stoppingToken)
         {
-            //File.AppendAllText(@"D:\logs\scheduler-log.txt", $"Started at {DateTime.Now}{Environment.NewLine}");
 
             var apiBaseUrl = _configuration.GetValue<string>("ApiBaseUrl");
             if (string.IsNullOrEmpty(apiBaseUrl))
