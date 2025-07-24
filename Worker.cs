@@ -21,6 +21,8 @@ namespace duedate
         protected override async Task ExecuteAsync(CancellationToken stoppingToken)
         {
 
+            _logger.LogInformation("starting to go read apibaseurl");
+
             var apiBaseUrl = _configuration.GetValue<string>("ApiBaseUrl");
             if (string.IsNullOrEmpty(apiBaseUrl))
             {
